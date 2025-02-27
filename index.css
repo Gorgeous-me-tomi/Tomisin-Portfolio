@@ -1,29 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body{
     background-color: #191919;
     padding: 0;
     margin: 0;
 }
 
+/* Utilities */
+.sec-border-end{
+    border: 0;
+    border-bottom:  1.5px solid  #648388;
+    padding: 50px 0;
+}
+
+hr{
+    border: 1.5px solid  #648388;
+    box-sizing: content-box;
+    width: 100%;
+}
+/* Picture sec */
 .fixed-img{
     background-image: url('https://cdn.openart.ai/published/C1XcfrMId9hq1FwBagah/MDRKuF76_Jn5v_1024.webp');
     width: 100%;
-    height: 820px;
+    height: 100vh;
     background-size: cover;
+    background-position: center;
+}
 
+/* main body sec */
+.nav-contain{
+    width: 100%;
+    /* height: 100%; */
+    position: fixed;
+    box-sizing: content-box;
+    background-color: red;
 }
 
 nav{
-    background-color: red;
     width: 100%;
-    /* height: 80px; */
-    background-color: #191919;
+    /* background-color: #191919; */
     border: none;
-    border-bottom: 1px solid #648388;
+    box-sizing: border-box;
+    border-bottom: 1px solid #888;
 }
 
 nav .nav-link{
     text-transform: uppercase;
-    color: #648388;
+    color: #888;
     letter-spacing: 1px;
     font-family: monospace;
     font-size: 14px;
@@ -48,5 +72,39 @@ nav .nav-link:hover{
 }
 
 .about h2{
-    font-family: os
+    font-family: "Rambla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.about .content{
+    font-size: 15px;
+    line-height: 2;
+    box-sizing: border-box;
+    font-family: "Rambla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #888;
+
+}
+
+.about .contact .info{
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    font-family: "Rambla", sans-serif;
+    
+
+}
+
+
+/* Social media section */
+
+.social-media-sec{
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-left: 1px solid #648388;
 }
