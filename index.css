@@ -83,6 +83,8 @@ hr{
     bottom: 0;
     left: 30%;
     z-index: 1;
+    border-radius: 15px;
+    padding: 13px ;
 
 }
 
@@ -218,6 +220,23 @@ nav .download-cv-btn{
     line-height: 2;
 }
 
+/* Skills */
+.portfolio .skills{
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+.skills .svg{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.portfolio .link-attr{
+    font-size: 13px;
+}
 /* Social media section */
 
 .social-media-sec{
@@ -228,8 +247,8 @@ nav .download-cv-btn{
 }
 
 @media (max-width: 991px) and  (min-width:768px), (max-width: 490px){
-    .serv-box{flex-direction: column;}
-    /* .serv-box ._card h2{width: 100%;} */
+    .serv-box{flex-direction: column; text-align: center;}
+    .serv-box ._card h2{width: 100%;}
     .serv-box ._card{ width: 100%; }
 }
 
@@ -269,5 +288,6 @@ nav .download-cv-btn{
     .navbar{
         width: 100%;
         left: 0;
+        border-radius: 0;
     }
 }
