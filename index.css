@@ -13,7 +13,8 @@ body{
 .sec-border-end{
     border: 0;
     border-bottom:  1.5px solid  #648388;
-    padding: 50px 0;
+    padding: 70px 0;
+    
 }
 
 hr{
@@ -60,7 +61,7 @@ hr{
     background-repeat: no-repeat;
 }
 
-.pause-play{
+.gif-img{
     margin-right: 40px;
     position: absolute;
     top: 40px;
@@ -102,7 +103,8 @@ nav .nav-link{
 }
 
 nav .nav-link.active{
-    color: #F68338 !important;
+    color: #F68338;
+
 }
 
 nav .nav-link:focus{
@@ -111,9 +113,9 @@ nav .nav-link:focus{
 
 nav .nav-link:hover{
     transition: 0.5s all ease-in-out;
-    /* border-bottom: 1px solid #F68338; */
     color: #F68338;
     padding: 0;
+    text-decoration: line-through;
 }
 
 nav .download-cv-btn{
@@ -167,7 +169,6 @@ nav .download-cv-btn{
     border-radius: 100%;
     cursor: pointer;
     position: relative;
-    border: 1px solid #888;
 }
 
 .scroll-down a{
@@ -175,13 +176,6 @@ nav .download-cv-btn{
     animation: scroll-down 1s infinite;
     color: #888;
 }
-
-.scroll-down:hover{
-    transition: 1s all ease;
-    border: 1px solid #F68338;
-    color: #F68338;
-}
-
 
 @keyframes scroll-down { 0%{top: -5px; } 50%{ top: 10px; } 100%{top: -5px;} }
 
@@ -222,7 +216,26 @@ nav .download-cv-btn{
     font-weight: bold;
 }
 
-/* Skills */
+/* Portfolio */
+.portfolio .projects{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.portfolio .__card{
+    background-color: #F68338;
+    padding: 20px 15px;
+    width: 50%;
+    height: 200px;
+    /* border: 1px solid #F68338; */
+}
+.__card .img-container{
+    background-color: red;
+    width: 100%;
+}
+
+
 .portfolio .skills{
     margin: 30px auto;
     display: flex;
@@ -239,6 +252,9 @@ nav .download-cv-btn{
 .portfolio .link-attr{
     font-size: 10px;
 }
+
+
+
 /* Right Nav section */
 
 .rigt-nav-sec{
@@ -280,15 +296,18 @@ nav .download-cv-btn{
 }
 
 .rigt-nav-sec .icons-grp{
+    /* background-color: red; */
+    /* height: 60vh; */
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     position: absolute;
-    bottom: 150px;
+    bottom: 20%;
 }
 
 .icons-grp i{
     font-size: 15px;
-    margin-top: 22px;
+    margin-top: 30px;
     border:  1px solid #648388;     
     padding: 12px 15px;
     border-radius:  100%;

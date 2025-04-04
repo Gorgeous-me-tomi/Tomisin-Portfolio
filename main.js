@@ -3,8 +3,8 @@ generateColor()
 updateColor()
 
 const updateNavSpy = () => {
-  $( ".nav-link" ).css("color", "white")
-  $( ".nav-link.active" ).css("color", newColor)
+  $( ".nav-link" ).css({"color": "white", "text-decoration": "solid"})
+  $( ".nav-link.active" ).css({"color": newColor, "text-decoration": "line-through"})
 };
 
 updateNavSpy()
@@ -29,7 +29,7 @@ function updateColor(){
       }, function(){$(this).css({"color":"whitesmoke", "border-color":"#648388"});
     });
     $(".__h").hover(function(){
-      $(this).css({"color": newColor, "background-color": "white","border-color":newColor});
+      $(this).css({"color": "white", "background-color": newColor,"border-color":newColor});
       }, function(){
       $(this).css({"color": "#888", "background-color":"transparent", "border-color":"#888"});
     });
