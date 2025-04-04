@@ -193,6 +193,7 @@ nav .download-cv-btn{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 15px;
 }
 
 .serv-box ._card{
