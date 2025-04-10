@@ -1,13 +1,18 @@
 let newColor; 
-generateColor()
-updateColor()
+
+const shuffle = () => {
+  generateColor()
+  updateColor()
+  updateNavSpy()
+}
 
 const updateNavSpy = () => {
   $( ".nav-link" ).css({"color": "white", "text-decoration": "solid"})
   $( ".nav-link.active" ).css({"color": newColor, "text-decoration": "line-through"})
 };
 
-updateNavSpy()
+shuffle()
+
 
 function rgb2hex(r,g,b){
   return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
