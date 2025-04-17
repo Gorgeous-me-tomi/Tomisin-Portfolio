@@ -63,11 +63,7 @@ $(function () {
     $(document).scroll(function(){
       updateNavSpy()
     })
-
-
 });
-
-
 
 function sendMail(){
   var params = {
