@@ -42,22 +42,23 @@ function updateColor(){
     $("#color-swatch").val(newColor)
 }
 
+function togglePic(what){
+  if (what == 1){
+    $("#pause").css("display", "none")
+    $("#play").css("display", "block")
+    $(".fixed-gif").css('background-image', 'url("gifs/my_new_bitmoji.gif")')
+  } else{
+    $("#pause").css("display", "block")
+    $("#play").css("display", "none")
+    $(".fixed-gif").css('background-image', 'url("gifs/My_Bitmoji.gif")')
+  }
+}
+
 $(function () {   
     $("#color-swatch").change(function(){
         newColor =  $("#color-swatch").val()
         updateColor()
       });
-
-      // toggle gif and img
-    $(".gif-img").click(function(){
-        $("#img-icon").toggle()
-        $("#gif-icon").css("display", "block")
-        $("#gif-img").css("background-image", " url('images/SnakeGame-portfolio.png');")
-        $("#img-icon").css("display", "block")
-        $("#gif-icon").css("display", "none")
-        $("#gif-img").css("background-image", " url('gifs/My_Bitmoji.gif');")
-      alert("The paragraph was clicked.");
-    });
 
     $(document).scroll(function(){
       updateNavSpy()
@@ -65,3 +66,29 @@ $(function () {
 
 
 });
+
+
+
+function sendMail(){
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    msg:document.getElementById("msg").value,
+  }
+  const serviceID = "service_nhs6n5l";
+  const templateID = "template_2hg7k1h";
+
+  emailjs.send(serviceID,templateID,params).then(
+    res =>{
+      document.getElementById("name").value = ""
+      document.getElementById("email").value = ""
+      document.getElementById("msg").value = ""
+      console.log(res)
+      $(".alert").css("display", "block")
+    })
+  .catch(err=>console.log(err))
+
+}
+
+
+

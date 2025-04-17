@@ -24,10 +24,10 @@
 
         <!-- Gif Section -->
         <div class="gif-sec col-12 col-md-4 px-1">
-            <div class="fixed-gif"></div>
-            <div class="gif-img">
-              <i id="img-icon" class="bi bi-file-image-fill text-dark  mx-auto" style=" font-size: 30px;"></i> 
-              <i id="gif-icon" class="bi bi-file-play-fill text-dark  mx-auto" style=" font-size: 30px; display: none;"></i> 
+            <div class="fixed-gif" id="img-fixed"></div>
+            <div class="pa-play">
+              <i id="pause" onclick="togglePic(1)" class="bi bi-arrow-right-square text-dark  mx-auto" style=" font-size: 40px;"></i> 
+              <i id="play"  onclick="togglePic()" class="bi bi-arrow-left-square text-dark  mx-auto" style=" font-size: 40px; display: none;"></i> 
              </div>
 
              <script>
@@ -51,13 +51,14 @@
                           <a class="nav-link" href="#about"><i class="bi bi-file-person-fill"></i> About</a>
                           <a class="nav-link" href="#services"><i class="bi bi-award-fill"></i> Services</a>
                           <a class="nav-link" href="#portfolio"><i class="bi bi-person-workspace"></i> Portfolio</a>
-                          <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                          <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i> Contact</a>
                           <a class="not_a mb-5 mb-md-0 " href="Tomisin RESUME (1).pdf" target="_blank"><button class="view-cv-btn __c"><i class="bi bi-eye-fill me-1"></i> VIEW RESUME</button></a>
                       </div>
 
                     </div>
 
-                    <div class="color-shuffle d-block d-md-none me-3" style="font-size: 29px; cursor: pointer; color: darkred;" onclick="shuffle()"><i class="bi bi-palette-fill"></i></div>
+                    <!-- <div class="color-shuffle d-block d-md-none me-3" style="font-size: 29px; cursor: pointer; color: darkred;" onclick="shuffle()"><i class="bi bi-palette-fill"></i></div> -->
+                    <img class=" color-shuffle d-block d-md-none me-3 me-3" src="icons/icons8-rgb-color-wheel-48.png" onclick="shuffle()" alt="" srcset="" width="40px" height="40px">
                     
                     
                   </div>
@@ -82,7 +83,7 @@
                       });
                     </script>
                 </div>
-                <p class="content-txt my-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, asperiores in eos est hic dolorem nostrum! Porro quis aperiam quaerat provident dignissimos vel quasi rem voluptate. Odio ratione tempore ducimus!</p>
+                <p class="content-txt my-5"> Passionate, outstanding, and aspiring web developer — a true definition of when ideas meet code. Most of my projects are the result of ideas brought to life through coding. I enjoy creating web applications that offer great user experiences and bring real value to today’s world</p>
 
                 <!-- Buttons -->
                 <a href="contact" class="contact-me-btn me-4 __c">Contact Me <i class=" ms-2 bi bi-caret-right-fill"></i></a>
@@ -95,14 +96,19 @@
       
                 <h2 class="text-light cont-head">About Me</h2>   
                 <span class="cont-sub-head __c">My Story</span>
-                <p class="content-txt mt-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, asperiores in eos est hic dolorem nostrum! Porro quis aperiam quaerat provident dignissimos vel quasi rem voluptate. Odio ratione tempore ducimus!</p>
-                <p class="content-txt mt-2">asperiores  Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, asperiores in eos est hic dolorem nostrum! Porro quis aperiam quaerat provi in eos est hic dolorem nostrum! Porro quis aperiam quaerat provident dignissimos vel quasi rem voluptate. Odio ratione tempore ducimus!</p>
+                <p class="content-txt mt-5">Growing up, I was full of ideas but had no outlet to bring them to life. That  changed in 2020 when I enrolled in a computer school named Aptech Computer Education, where I was introduced to the basics of programming. From the very first day, I was interested and inspired by coding. I was eager to learn more, so I began taking online courses on Udemy and diving deeper into the world of code. <br><br>
+
+                  Two years in, I’ve built a range of unique and exciting projects.  But more than the successes, it's the countless errors I’ve encountered that have sharpened my problem-solving skills and shaped me into the programmer I am today. <br><br>
+                  
+                  Today, I’m an efficient, dedicated developer who values every chance to code and collaborate. Let’s work together to turn your ideas into reality.
+                </p>
+                <!-- <p class="content-txt mt-2">asperiores  Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, asperiores in eos est hic dolorem nostrum! Porro quis aperiam quaerat provi in eos est hic dolorem nostrum! Porro quis aperiam quaerat provident dignissimos vel quasi rem voluptate. Odio ratione tempore ducimus!</p> -->
 
                 <div class="contact mt-5">
                   <!-- row 1 -->
                   <div class="row">
                     <div class="col-12 col-sm-6 mb-3 info">
-                      <span  me-4 class="__c" style="color: #F68338;">AGE:</span> 16
+                      <span  me-4 class="__c" style="color: #F68338;">AGE:</span> 17
                     </div>
                     <div class="col-12 col-sm-6 mb-3 info">
                       <span  me-4 class="__c" style="color: #F68338;">RESIDENCE:</span> CANADA
@@ -163,28 +169,29 @@
                 <!-- Portfolio display -->
                 <div class="projects row ">
                   <div class="__card col-12 col-lg-6" >  
-                    <h1 class="mb-5" style="color: white; font-size: 27px;">Video Chat web</h1>
+                    <h1 style="color: white; font-size: 27px;">T_Sketch</h1>
+                    <h3 style=" font-size: 22px;">DJANGO</h3>
+                    <button class="btn btn-lg btn-dark btn-block my-2 __c btn-disabled" disabled>Preview</button>
+                    <a class="btn btn-lg btn-secondary btn-block" target="_blank" href="https://github.com/Gorgeous-me-tomi/T-Sketch_">Github</a>
+                  </div>
+
+                  <div class="__card col-12 col-lg-6" >  
+                    <h1 style="color: white; font-size: 27px;">Snake Game</h1>
+                    <h3 style=" font-size: 22px;">Python</h3>
+                    <button class="btn btn-lg btn-dark btn-block my-2 __c">Preview</button>
+                    <a class="btn btn-lg btn-secondary btn-block " target="_blank" href="https://github.com/Gorgeous-me-tomi/snake-game">Github</a>
+
+                  </div>
+
+                  <div class="__card col-12 col-lg-6" >  
+                    <h1 style="color: white; font-size: 27px;">Video Chat web</h1>
                     <h3 style=" font-size: 22px;">React</h3>
                     <button class="btn btn-lg btn-dark btn-block my-2 __c">Preview</button>
                     <button class="btn btn-lg btn-secondary btn-block ">Preview</button>
                   </div>
 
                   <div class="__card col-12 col-lg-6" >  
-                    <h1 class="mb-5" style="color: white; font-size: 27px;">Video Chat web</h1>
-                    <h3 style=" font-size: 22px;">React</h3>
-                    <button class="btn btn-lg btn-dark btn-block my-2 __c">Preview</button>
-                    <button class="btn btn-lg btn-secondary btn-block ">Preview</button>
-                  </div>
-
-                  <div class="__card col-12 col-lg-6" >  
-                    <h1 class="mb-5" style="color: white; font-size: 27px;">Video Chat web</h1>
-                    <h3 style=" font-size: 22px;">React</h3>
-                    <button class="btn btn-lg btn-dark btn-block my-2 __c">Preview</button>
-                    <button class="btn btn-lg btn-secondary btn-block ">Preview</button>
-                  </div>
-
-                  <div class="__card col-12 col-lg-6" >  
-                    <h1 class="mb-5" style="color: white;font-size: 27px;">Video Chat web</h1>
+                    <h1 style="color: white;font-size: 27px;">Video Chat web</h1>
                     <h3 style=" font-size: 22px;">React</h3>
                     <button class="btn btn-lg btn-dark btn-block my-2 __c">Preview</button>
                     <button class="btn btn-lg btn-secondary btn-block ">Preview</button>
@@ -216,6 +223,7 @@
                         <a target="_blank" href="https://icons8.com/icon/ewGOClUtmFX4/flask">Flask</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
                         <a target="_blank" href="https://icons8.com/icon/20906/git">Git</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
                         <a target="_blank" href="https://icons8.com/icon/qV-JzWYl9dzP/django">Django</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                        <a target="_blank" href="https://icons8.com/icon/63812/rgb-color-wheel">RGB Color Wheel</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
                       </div>
                     </div>
                   </div>
@@ -227,10 +235,41 @@
               <section id="contact" class="contact-me sec-border-end">
                 <div class="contact-content">
                   <span class="__c">What is next?</span>
-                 <h1>Get In Touch</h1>
+                  <h1>Get In Touch</h1>
                 </div>
-                
+
+                <!-- Form -->
+                <div  class="mt-5 form">
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Message Sent!</strong>I would get back to you as soon as possible.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-12 col-lg-6">
+                      <label class="__c" for="name">Your Name</label>
+                      <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                      <label class="__c" for="email">Email Adress</label>
+                      <input type="text" id="email" placeholder="Enter your email address" required>
+                    </div>
+                  </div>
+                  <div  style="margin-top: 50px">
+                    <label class="__c" for="msg">Your Message</label>
+                    <textarea id="msg" style="width: 100%; "  placeholder="Hi, I think I have a project that has been on my mind... How soon can you be available to discuss about it?" id="message" required="required" rows="3" minlength="30"></textarea>
+                  </div>
+                  <button onclick="sendMail()" class="submit __c mt-5 mx-auto" >SEND <i class="bi bi-arrow-right"></i> </button>
+                </div>
+
               </section>
+              <footer class="text-center mt-2 __c">Designed & Built by Tomisin Erinle</footer>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
          
 
             </div>
@@ -256,6 +295,16 @@
     </div>
   </div>
 
+   <!-- Smtp js -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+        publicKey: "3GWmBVDrGOj27PxjV",
+    });
+    })();
+    </script>
+   <!-- <script src="https://smtpjs.com/v3/smtp.js"> </script> -->
   <!-- Js -->
    <script src="main.js"></script>
   <!-- font Awesome -->

@@ -24,7 +24,7 @@ hr{
 }
 
 .content-txt{
-    font-size: 16px;
+    font-size: 17px;
     line-height: 2;
     box-sizing: border-box;
     font-family: "Rambla", sans-serif;
@@ -34,7 +34,7 @@ hr{
 }
 
 .cont-head{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -47,6 +47,10 @@ hr{
 .not_a{
     display: inline-block;
     color: inherit;
+}
+
+.btn-disabled{
+    cursor: not-allowed !important;
 }
 
 /* Picture sec */
@@ -66,8 +70,8 @@ hr{
     background-repeat: no-repeat;
 }
 
-.gif-img{
-    margin-right: 40px;
+.pa-play{
+    margin-right: 50px;
     position: absolute;
     top: 40px;
     right: 0;
@@ -75,8 +79,6 @@ hr{
 }
 
 /* main body sec */
-
-
 
 .navbar{
     width: 70%;
@@ -86,15 +88,19 @@ hr{
     border: none;
     box-sizing: border-box;
     border-bottom: 1px solid #888;
-    position: fixed !important;
+    position: fixed;
     bottom: 0;
     left: 30%;
     z-index: 1;
     border-radius: 10px;
     padding: 13px ;
-
+    cursor: pointer;
 }
 
+nav .color-shuffle:hover{
+    transition: all 1s ease;
+    transform: rotate(180deg);
+}
 
 nav .nav-link{
     text-transform: uppercase;
@@ -132,6 +138,7 @@ nav .view-cv-btn{
 }
 
 
+
 /* .body-content{
     padding: 0 50px;
 } */
@@ -145,7 +152,7 @@ nav .view-cv-btn{
     font-family: "Rambla", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 50px;
+    font-size: 55px;
     margin-top: 5px;
 }
 
@@ -249,9 +256,9 @@ nav .view-cv-btn{
     align-items: center;
 }
 .skills .svg{
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
+    width: 90px;
+    height: 90px;
+    margin-top: 10px; 
     margin-right: 10px;
 }
 .portfolio .link-attr{
@@ -265,6 +272,7 @@ nav .view-cv-btn{
     flex-direction: column;
     align-items: center;
 }
+
 .contact-content span{
     font-size: 20px;
     letter-spacing: 3px;
@@ -276,7 +284,50 @@ nav .view-cv-btn{
     font-size: 60px;
     letter-spacing: 2px;
 }
+/* 
+.contact-me form label{
+    font-size: 15px;
+} */
 
+
+.contact-me .alert{
+    display: none;
+}
+
+.contact-me .form input,
+.contact-me .form textarea{
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #888;
+    margin-top: 10px;
+    padding: 10px 0;
+    color: #28282B;
+    width: 90%;
+} 
+
+.contact-me .form input:focus,
+.contact-me .form textarea:focus{
+    color: white;
+    border-bottom: 1px solid white;
+
+}
+
+.form input::placeholder,
+.contact-me .form textarea::placeholder{
+    font-size: 1.10em;
+    line-height: 1.5;
+}
+
+.form button.submit{
+    width: 250px;
+    height: 50px;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border: 1px solid white;
+    box-shadow: none;
+}
 
 /* Right Nav section */
 
@@ -330,7 +381,7 @@ nav .view-cv-btn{
 
 .icons-grp a{
     margin-top: 30px;
-    padding: 12px 15px;
+    padding: 14px 15px;
 
 }
 
@@ -351,7 +402,11 @@ nav .view-cv-btn{
     .serv-box{flex-direction: column; text-align: center;}
     .serv-box ._card h2{width: 100%;}
     .serv-box ._card{ width: 100%; }
-    .portfolio .__card{width: 100%;}
+    .portfolio .__card{width: 100%; margin-bottom: 15px;}
+    .skills .svg{width: 75px; height: 75px;}
+    .pa-play{margin-right: 30px; top: 30px;}
+
+    
 }
 
 
@@ -370,7 +425,7 @@ nav .view-cv-btn{
     .navbar{
         margin-top: 3;
         width: 100%;
-        position: sticky !important;
+        position: sticky;
         top: 0;
         left: 0;
         height: fit-content;
@@ -383,7 +438,11 @@ nav .view-cv-btn{
         margin-top: 10px;
         margin-right: 10px;
     }
-    #swatch input[type="color"] { margin: 0;}
+    .rigt-nav-sec .icons-grp i{ 
+        font-size: 15px;
+        padding: 5px 8px;
+
+    }
 
 
 
@@ -393,6 +452,11 @@ nav .view-cv-btn{
     .nav-link{
         margin-bottom: 20px;
         margin-right: 0px;
+    }
+    .icons-grp a{
+        margin-top: 30px;
+        padding: 7px 10px;
+    
     }
     .rigt-nav-sec .icons-grp i{ 
         font-size: 15px;
