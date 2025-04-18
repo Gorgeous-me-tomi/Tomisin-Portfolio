@@ -55,6 +55,7 @@ function togglePic(what){
 }
 
 $(function () {   
+ 
     $("#color-swatch").change(function(){
         newColor =  $("#color-swatch").val()
         updateColor()
@@ -64,6 +65,9 @@ $(function () {
       updateNavSpy()
     })
 });
+
+// custom  effect
+
 
 function sendMail(){
   var params = {

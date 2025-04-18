@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
 body{
     background-color: #191919;
     padding: 0;
@@ -8,6 +9,10 @@ body{
     color: #888;
     font-family: "Rambla", sans-serif;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
 
 /* Utilities */
 .sec-border-end{
@@ -264,6 +269,7 @@ nav .view-cv-btn{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .contact-content span{
@@ -386,28 +392,24 @@ nav .view-cv-btn{
 
 
 @media (max-width: 991px) and  (min-width:768px), (max-width: 490px){
-    .serv-box{flex-direction: column; text-align: center;}
-    .serv-box ._card h2{width: 100%;}
-    .serv-box ._card{ width: 100%; }
-    .portfolio .__card{width: 100%; margin-bottom: 15px;}
+
     .skills .svg{width: 75px; height: 75px;}
     .pa-play{margin-right: 30px; top: 30px;}
-
     
 }
 
 
+@media (max-width: 576px) {
+    .serv-box{flex-direction: column; text-align: center;}
+    .serv-box ._card h2{width: 100%;}
+    .serv-box ._card{ width: 100%; }
+    .portfolio .__card{width: 100%; margin-bottom: 15px;}
+    body{zoom:60%}
+
+}
 @media (max-width: 767px) {
-
-    .fixed-gif{
-        width: 100%;
-        height: 400px;
-        position: static;
-    }
-
-    .gif-sec{
-        position: static;
-    }
+    
+    body{zoom:85%}
 
     .navbar{
         margin-top: 3;
@@ -433,6 +435,19 @@ nav .view-cv-btn{
 }
 
 @media (max-width: 991px) {
+
+ 
+    .fixed-gif{
+        width: 100%;
+        height: 500px;
+        position: static;
+        background-size: auto;
+
+    }
+
+    .gif-sec{
+        position: static;
+    }
     .nav-link{
         margin-bottom: 20px;
         margin-right: 0px;
